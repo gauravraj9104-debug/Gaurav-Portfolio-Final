@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IoT-Based Water Purification System | Gaurav Raj</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: 'Inter', sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(37, 99, 235, 0.15),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    rgba(124, 58, 237, 0.12),
+                    transparent 35%
+                ),
+                #050816;
+
+            color: #ffffff;
+
+            line-height: 1.7;
+
+            min-height: 100vh;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        .container {
+            width: min(1100px, 90%);
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .top-bar {
+            padding: 25px 0;
+        }
+
+
+        .back-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 12px 20px;
+
+            border-radius: 10px;
+
+            background: rgba(255,255,255,0.05);
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            color: #dbeafe;
+
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+
+            border-color: #3b82f6;
+
+            background: rgba(37,99,235,0.12);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .project-hero {
+            text-align: center;
+
+            padding: 60px 0 45px;
+        }
+
+
+        .project-label {
+            display: inline-block;
+
+            padding: 7px 16px;
+
+            border-radius: 50px;
+
+            color: #bfdbfe;
+
+            background: rgba(37,99,235,0.12);
+
+            border: 1px solid rgba(59,130,246,0.25);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+
+        .project-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: clamp(36px, 6vw, 64px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+
+        .gradient-text {
+            background:
+                linear-gradient(
+                    135deg,
+                    #3b82f6,
+                    #8b5cf6
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .project-intro {
+            max-width: 760px;
+
+            margin: auto;
+
+            color: #aab7ce;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           PROJECT IMAGE
+        ========================= */
+
+        .project-image {
+            margin: 30px auto 60px;
+
+            max-width: 950px;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.45);
+        }
+
+
+        .project-image img {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .content-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 25px;
+        }
+
+
+        .info-card {
+            padding: 30px;
+
+            border-radius: 18px;
+
+            background: rgba(255,255,255,0.035);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            transition: 0.3s ease;
+        }
+
+
+        .info-card:hover {
+            transform: translateY(-4px);
+
+            border-color:
+                rgba(59,130,246,0.35);
+        }
+
+
+        .info-card h2 {
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: 24px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .info-card p {
+            color: #b5c1d6;
+        }
+
+
+        /* =========================
+           FULL WIDTH SECTIONS
+        ========================= */
+
+        .full-section {
+            margin-top: 25px;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            background: rgba(255,255,255,0.035);
+
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+
+        .full-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+
+            font-size: 28px;
+
+            margin-bottom: 22px;
+        }
+
+
+        /* =========================
+           HOW IT WORKS
+        ========================= */
+
+        .steps {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .step {
+            padding: 22px;
+
+            border-radius: 14px;
+
+            background: rgba(255,255,255,0.035);
+
+            border: 1px solid rgba(255,255,255,0.07);
+        }
+
+
+        .step-number {
+            color: #60a5fa;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+
+        .step h3 {
+            font-size: 17px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .step p {
+            color: #9eabc1;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           TECHNOLOGIES
+        ========================= */
+
+        .tech-list {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        .tech {
+            padding: 9px 16px;
+
+            border-radius: 50px;
+
+            background: rgba(37,99,235,0.10);
+
+            border: 1px solid rgba(59,130,246,0.20);
+
+            color: #bfdbfe;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .feature-list {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 15px;
+        }
+
+
+        .feature {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            color: #cbd5e1;
+        }
+
+
+        .feature i {
+            color: #60a5fa;
+        }
+
+
+        /* =========================
+           CONTRIBUTION
+        ========================= */
+
+        .contribution-list {
+            padding-left: 20px;
+
+            color: #b5c1d6;
+        }
+
+
+        .contribution-list li {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .project-actions {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin: 55px 0;
+        }
+
+
+        .btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 13px 23px;
+
+            border-radius: 10px;
+
+            font-weight: 700;
+
+            transition: 0.3s ease;
+        }
+
+
+        .btn-primary {
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #7c3aed
+                );
+
+            color: white;
+
+            box-shadow:
+                0 8px 25px rgba(37,99,235,0.20);
+        }
+
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 35px rgba(37,99,235,0.35);
+        }
+
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.04);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            color: #e2e8f0;
+        }
+
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+
+            border-color: #3b82f6;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 30px 0;
+
+            border-top:
+                1px solid rgba(255,255,255,0.08);
+
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .steps {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .project-hero {
+                padding-top: 40px;
+            }
+
+
+            .project-intro {
+                font-size: 15px;
+            }
+
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+
+
+            .full-section,
+            .info-card {
+                padding: 22px;
+            }
+
+
+            .project-actions {
+                flex-direction: column;
+            }
+
+
+            .btn {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         BACK TO PORTFOLIO
+    ========================= -->
+
+    <div class="top-bar">
+
+        <div class="container">
+
+            <a href="index.html" class="back-btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Portfolio
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PROJECT HERO
+    ========================= -->
+
+    <section class="project-hero">
+
+        <div class="container">
+
+            <span class="project-label">
+                IoT Project
+            </span>
+
+
+            <h1>
+
+                IoT-Based
+
+                <span class="gradient-text">
+                    Water Purification
+                </span>
+
+                System
+
+            </h1>
+
+
+            <p class="project-intro">
+
+                A smart water-quality monitoring and purification
+                concept using sensors, automation and an IoT-based
+                dashboard for real-time monitoring.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECT IMAGE
+    ========================= -->
+
+    <div class="container">
+
+        <div class="project-image">
+
+            <img
+                src="images.jpg"
+                alt="IoT-Based Water Purification System">
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PROJECT DETAILS
+    ========================= -->
+
+    <main class="container">
+
+
+        <!-- Overview + Problem -->
+
+        <div class="content-grid">
+
+
+            <div class="info-card">
+
+                <h2>
+                    Project Overview
+                </h2>
+
+                <p>
+
+                    The IoT-Based Water Purification System
+                    focuses on monitoring water quality using
+                    connected sensors and automation.
+
+                    The collected information can be monitored
+                    through an IoT dashboard, allowing users to
+                    observe water-related parameters in real time.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h2>
+                    Problem Statement
+                </h2>
+
+                <p>
+
+                    Traditional water-quality monitoring can
+                    require manual observation and may not provide
+                    continuous information.
+
+                    This project explores an IoT-based approach
+                    for making water-quality monitoring more
+                    accessible and automated.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h2>
+                    Project Objective
+                </h2>
+
+                <p>
+
+                    The main objective is to develop a smart
+                    monitoring system capable of collecting
+                    water-quality information through sensors
+                    and presenting the information through an
+                    IoT/web dashboard.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <h2>
+                    My Contribution
+                </h2>
+
+                <p>
+
+                    I worked on the project concept and system
+                    structure with a focus on IoT-based monitoring,
+                    sensor integration, automation and dashboard
+                    visualization.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =========================
+             HOW IT WORKS
+        ========================= -->
+
+        <section class="full-section">
+
+            <h2>
+                How It Works
+            </h2>
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Sensors Collect Data
+                    </h3>
+
+                    <p>
+
+                        Sensors collect relevant information
+                        about the water condition.
+
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Data Processing
+                    </h3>
+
+                    <p>
+
+                        The collected information is processed
+                        by the system controller.
+
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Monitoring
+                    </h3>
+
+                    <p>
+
+                        The system monitors the available
+                        water-quality information continuously.
+
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Dashboard
+                    </h3>
+
+                    <p>
+
+                        The collected information can be
+                        displayed through an IoT/web dashboard.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TECHNOLOGIES
+        ========================= -->
+
+        <section class="full-section">
+
+            <h2>
+                Technologies Used
+            </h2>
+
+
+            <div class="tech-list">
+
+                <span class="tech">
+                    IoT
+                </span>
+
+                <span class="tech">
+                    Sensors
+                </span>
+
+                <span class="tech">
+                    Automation
+                </span>
+
+                <span class="tech">
+                    Web Dashboard
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURES
+        ========================= -->
+
+        <section class="full-section">
+
+            <h2>
+                Key Features
+            </h2>
+
+
+            <div class="feature-list">
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Real-time water-quality monitoring
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Sensor-based data collection
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Automated monitoring
+
+                </div>
+
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    IoT/web dashboard integration
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MY CONTRIBUTION
+        ========================= -->
+
+        <section class="full-section">
+
+            <h2>
+                My Contribution
+            </h2>
+
+
+            <ul class="contribution-list">
+
+                <li>
+                    Worked on the overall project concept
+                    and system structure.
+                </li>
+
+                <li>
+                    Focused on IoT-based water-quality
+                    monitoring.
+                </li>
+
+                <li>
+                    Worked with the concept of sensor-based
+                    data collection.
+                </li>
+
+                <li>
+                    Explored automation and dashboard-based
+                    monitoring.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- =========================
+             ACTION BUTTONS
+        ========================= -->
+
+        <div class="project-actions">
+
+
+            <a
+                href="index.html"
+                class="btn btn-secondary">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Portfolio
+
+            </a>
+
+
+            <a
+                href="https://github.com/gauravraj9104-debug"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary">
+
+                <i class="fa-brands fa-github"></i>
+
+                View GitHub
+
+            </a>
+
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            © 2026 Gaurav Raj. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
