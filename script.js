@@ -827,3 +827,53 @@ window.addEventListener(
 
     }
 );
+/* =========================================
+   13. LIGHT / DARK THEME
+========================================= */
+
+const themeToggle = document.getElementById("themeToggle");
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "light") {
+    document.body.classList.add("light-theme");
+}
+
+function updateThemeIcon() {
+
+    if (!themeToggle) return;
+
+    const icon = themeToggle.querySelector("i");
+
+    if (!icon) return;
+
+    if (document.body.classList.contains("light-theme")) {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+    } else {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+    }
+}
+
+updateThemeIcon();
+
+if (themeToggle) {
+
+    themeToggle.addEventListener("click", () => {
+
+        document.body.classList.toggle("light-theme");
+
+        const isLight =
+            document.body.classList.contains("light-theme");
+
+        localStorage.setItem(
+            "theme",
+            isLight ? "light" : "dark"
+        );
+
+        updateThemeIcon();
+
+    });
+
+}
