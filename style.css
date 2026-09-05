@@ -4089,3 +4089,122 @@ body,
         border-color 0.3s ease,
         box-shadow 0.3s ease;
 }
+/* =========================================
+   LIGHT THEME - VISIBILITY FIX
+========================================= */
+
+/* Cards and sections */
+body.light-theme .about-content,
+body.light-theme .about-card,
+body.light-theme .timeline-card,
+body.light-theme .skill-category,
+body.light-theme .project-card,
+body.light-theme .journey-card,
+body.light-theme .contact-wrapper {
+    background: rgba(255, 255, 255, 0.88);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+/* Main text */
+body.light-theme .about-content p,
+body.light-theme .about-card p,
+body.light-theme .timeline-card p,
+body.light-theme .skill-category p,
+body.light-theme .project-card p,
+body.light-theme .journey-card p,
+body.light-theme .contact-wrapper p {
+    color: var(--text-secondary);
+}
+
+/* Headings inside cards */
+body.light-theme .about-content h3,
+body.light-theme .about-card h3,
+body.light-theme .timeline-card h3,
+body.light-theme .skill-category h3,
+body.light-theme .project-card h3,
+body.light-theme .journey-card h3 {
+    color: var(--text-primary);
+}
+
+/* Small / muted text */
+body.light-theme .text-muted,
+body.light-theme .muted,
+body.light-theme .timeline-date,
+body.light-theme .timeline-location {
+    color: var(--text-secondary);
+}
+
+/* Skills */
+body.light-theme .skill-badge {
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+/* Project links/buttons */
+body.light-theme .github-small {
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--blue);
+    border-color: var(--border);
+}
+
+body.light-theme .github-small:hover {
+    background: rgba(37, 99, 235, 0.14);
+    color: var(--blue);
+}
+
+/* Form */
+body.light-theme .form-group input,
+body.light-theme .form-group textarea {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+body.light-theme .form-group input::placeholder,
+body.light-theme .form-group textarea::placeholder {
+    color: #64748b;
+}
+
+/* Labels */
+body.light-theme .form-group label {
+    color: var(--text-primary);
+}
+
+/* Footer */
+body.light-theme .footer {
+    background: #eef2ff;
+    color: var(--text-primary);
+}
+
+body.light-theme .footer p,
+body.light-theme .footer span {
+    color: var(--text-secondary);
+}
+
+/* Mobile navigation */
+body.light-theme .nav-menu {
+    background: rgba(248, 250, 252, 0.98);
+}
+
+body.light-theme .nav-menu .nav-link {
+    color: var(--text-primary);
+}
+
+body.light-theme .nav-menu .nav-link:hover,
+body.light-theme .nav-menu .nav-link.active {
+    color: var(--blue);
+}
+
+/* Back to top */
+body.light-theme .back-to-top {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Theme button */
+body.light-theme .theme-toggle {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
+}
