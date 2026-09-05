@@ -4208,3 +4208,135 @@ body.light-theme .theme-toggle {
     background: rgba(255, 255, 255, 0.9);
     color: var(--text-primary);
 }
+/* =========================================
+   FINAL LIGHT MODE FIX
+   Applies to ALL portfolio components
+========================================= */
+
+body.light-theme .about-content,
+body.light-theme .about-card,
+body.light-theme .timeline-card,
+body.light-theme .skill-category,
+body.light-theme .service-card,
+body.light-theme .featured-project,
+body.light-theme .project-card,
+body.light-theme .journey-card,
+body.light-theme .contact-wrapper,
+body.light-theme .certificate-card,
+body.light-theme .coming-soon {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border-color: rgba(37, 99, 235, 0.20) !important;
+}
+
+/* ALL normal text inside cards */
+body.light-theme .about-content *,
+body.light-theme .about-card *,
+body.light-theme .timeline-card *,
+body.light-theme .skill-category *,
+body.light-theme .service-card *,
+body.light-theme .featured-project *,
+body.light-theme .project-card *,
+body.light-theme .journey-card *,
+body.light-theme .contact-wrapper *,
+body.light-theme .certificate-card *,
+body.light-theme .coming-soon * {
+    color: #0f172a;
+}
+
+/* Paragraph / secondary text */
+body.light-theme .about-content p,
+body.light-theme .about-card p,
+body.light-theme .timeline-card p,
+body.light-theme .timeline-card h4,
+body.light-theme .skill-category p,
+body.light-theme .service-card p,
+body.light-theme .service-card li,
+body.light-theme .featured-project p,
+body.light-theme .project-card p,
+body.light-theme .journey-card p,
+body.light-theme .contact-wrapper p,
+body.light-theme .form-note,
+body.light-theme .footer p {
+    color: #475569 !important;
+}
+
+/* Blue labels */
+body.light-theme .timeline-label,
+body.light-theme .project-type,
+body.light-theme .section-tag,
+body.light-theme .tech-tags span {
+    color: #2563eb !important;
+}
+
+/* Education badges */
+body.light-theme .education-meta span {
+    background: #eff6ff !important;
+    color: #334155 !important;
+    border-color: rgba(37, 99, 235, 0.18) !important;
+}
+
+body.light-theme .education-meta span i {
+    color: #2563eb !important;
+}
+
+/* Skill badges */
+body.light-theme .skill-badge {
+    background: #eff6ff !important;
+    color: #0f172a !important;
+    border-color: rgba(37, 99, 235, 0.18) !important;
+}
+
+/* Project GitHub buttons */
+body.light-theme .github-small {
+    background: #eff6ff !important;
+    color: #2563eb !important;
+}
+
+/* Form */
+body.light-theme .form-group input,
+body.light-theme .form-group textarea {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border-color: rgba(37, 99, 235, 0.20) !important;
+}
+
+body.light-theme .form-group input::placeholder,
+body.light-theme .form-group textarea::placeholder {
+    color: #64748b !important;
+}
+
+body.light-theme .form-group label {
+    color: #0f172a !important;
+}
+
+/* Mobile menu */
+body.light-theme .nav-menu {
+    background: #ffffff !important;
+}
+
+body.light-theme .nav-menu .nav-link {
+    color: #0f172a !important;
+}
+
+/* Back to top */
+body.light-theme .back-to-top {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+/* Footer */
+body.light-theme .footer {
+    background: #eef2ff !important;
+    color: #0f172a !important;
+}
+
+body.light-theme .footer-socials a {
+    color: #475569 !important;
+}
+
+/* Theme button */
+body.light-theme .theme-toggle {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
