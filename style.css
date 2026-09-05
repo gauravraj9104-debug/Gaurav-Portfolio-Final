@@ -3973,3 +3973,119 @@ button {
     }
 
 }
+/* =========================================
+   LIGHT / DARK THEME
+========================================= */
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.05);
+    border-color: var(--blue);
+}
+
+
+/* LIGHT THEME */
+
+body.light-theme {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #eef2ff;
+    --bg-card: rgba(255, 255, 255, 0.82);
+
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+
+    --border: rgba(59, 130, 246, 0.20);
+    --border-hover: rgba(59, 130, 246, 0.55);
+
+    --shadow:
+        0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Light mode body */
+
+body.light-theme {
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(37, 99, 235, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(139, 92, 246, 0.08),
+            transparent 30%
+        ),
+        var(--bg-primary);
+
+    color: var(--text-primary);
+}
+
+
+/* Light navbar */
+
+body.light-theme .navbar.scrolled {
+    background: rgba(248, 250, 252, 0.85);
+}
+
+
+/* Light buttons */
+
+body.light-theme .btn-secondary,
+body.light-theme .social-btn,
+body.light-theme .menu-toggle {
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--text-primary);
+}
+
+
+/* Light navigation */
+
+body.light-theme .nav-link:hover,
+body.light-theme .nav-link.active {
+    color: var(--text-primary);
+}
+
+
+/* Light floating elements */
+
+body.light-theme .floating-tech {
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--blue);
+}
+
+
+/* Smooth theme transition */
+
+body,
+.navbar,
+.timeline-card,
+.about-card,
+.skill-category,
+.project-card,
+.journey-card,
+.certificate-card,
+.btn-secondary,
+.social-btn,
+.floating-tech,
+.theme-toggle {
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
