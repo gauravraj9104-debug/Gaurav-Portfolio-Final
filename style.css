@@ -4340,3 +4340,29 @@ body.light-theme .theme-toggle {
     background: #ffffff !important;
     color: #0f172a !important;
 }
+/* =========================================
+   FIX PROFILE PHOTO - NORMAL & STABLE
+========================================= */
+
+.profile-image {
+    filter: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+.profile-image-wrapper {
+    filter: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+.profile-ring {
+    animation: none !important;
+}
+
+.profile-glow {
+    display: none !important;
+    animation: none !important;
+}
